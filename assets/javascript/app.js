@@ -48,6 +48,54 @@ var easyQuestions = {
 
 };
 
+var hardQuestions = {
+
+    question1: {
+        choices: [
+            "5280",
+            "3560",
+            "2000",
+            "4960"
+        ],
+        correctAnswer: "5280",
+        prompt: "How many feet are in a mile?"
+    },
+
+    question2: {
+        choices: [
+            "12",
+            "18",
+            "10",
+            "8"
+        ],
+        correctAnswer: "12",
+        prompt: "How many inches are in a foot?"
+    },
+
+    question3: {
+        choices: [
+            "3",
+            "4",
+            "5",
+            "8"
+        ],
+        correctAnswer: "3",
+        prompt: "How many feet are in a yard?"
+    },
+
+    question4: {
+        choices: [
+            "63,360",
+            "82,600",
+            "44,720",
+            "52,000"
+        ],
+        correctAnswer: "63,360",
+        prompt: "How many inches are in a mile?"
+    },
+
+};
+
 var playMode = {};
 
 $(".startButton").on("click", function () {
