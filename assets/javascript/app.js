@@ -1,8 +1,8 @@
 //  Game Mode Objects
 
-var easyQuestions = {
+var easyQuestions = [
 
-    question1: {
+    {
         prompt: "How many meters are in a kilometer?",
         correctAnswer: "1000",
         choices: [
@@ -13,7 +13,7 @@ var easyQuestions = {
         ],
     },
 
-    question2: {
+    {
         prompt: "How many centimeters are in a meter?",
         correctAnswer: "100",
         choices: [
@@ -24,7 +24,7 @@ var easyQuestions = {
         ],
     },
 
-    question3: {
+    {
         prompt: "How many millimeters are in a meter?",
         correctAnswer: "1000",
         choices: [
@@ -35,7 +35,7 @@ var easyQuestions = {
         ],
     },
 
-    question4: {
+    {
         prompt: "How many millimeters are in a kilometer?",
         correctAnswer: "1,000,000",
         choices: [
@@ -46,11 +46,11 @@ var easyQuestions = {
         ],
     },
 
-};
+];
 
-var hardQuestions = {
+var hardQuestions = [
 
-    question1: {
+    {
         prompt: "How many feet are in a mile?",
         correctAnswer: "5280",
         choices: [
@@ -61,7 +61,7 @@ var hardQuestions = {
         ],
     },
 
-    question2: {
+    {
         prompt: "How many inches are in a foot?",
         correctAnswer: "12",
         choices: [
@@ -72,7 +72,7 @@ var hardQuestions = {
         ],
     },
 
-    question3: {
+    {
         prompt: "How many feet are in a yard?",
         correctAnswer: "3",
         choices: [
@@ -83,7 +83,7 @@ var hardQuestions = {
         ],
     },
 
-    question4: {
+    {
         prompt: "How many inches are in a mile?",
         correctAnswer: "63,360",
         choices: [
@@ -94,7 +94,8 @@ var hardQuestions = {
         ],
     },
 
-};
+];
+console.log(hardQuestions);
 
 var correct = 0;
 var incorrect = 0;
@@ -124,19 +125,22 @@ function playGame() {
 
 
 
-    $("#currentQuestion").html(playMode.question1.prompt);
-    $("#ans1").html(playMode.question1.choices[0]);
-    $("#ans2").html(playMode.question1.choices[1]);
-    $("#ans3").html(playMode.question1.choices[2]);
-    $("#ans4").html(playMode.question1.choices[3]);
-    console.log(playMode.question1.correctAnswer);
+    $("#currentQuestion").html(playMode[0].prompt);
+
+    shuffle(playMode[0].choices);
+
+    $("#ans1").html(playMode[0].choices[0]);
+    $("#ans2").html(playMode[0].choices[1]);
+    $("#ans3").html(playMode[0].choices[2]);
+    $("#ans4").html(playMode[0].choices[3]);
+    console.log(playMode[0].correctAnswer);
 
     $(".ansButton").on("click", function () {
 
         var yourAnswer = this.innerHTML;
         console.log(yourAnswer);
 
-        if (yourAnswer === playMode.question1.correctAnswer) {
+        if (yourAnswer === playMode[0].correctAnswer) {
             correct++;
         } else {
             incorrect++
