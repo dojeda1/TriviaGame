@@ -166,6 +166,7 @@ $(document).ready(function () {
             console.log("times up");
 
             $("#currentQuestion").html("Out of Time!");
+            $("#correctAnswer").html("The answer was " + playMode[currentIndex].correctAnswer);
             $("#currentGif").html("<img src='assets/images/gifs/" + playMode[currentIndex].incorrectGif + "'>")
             waitingPage();
         }
@@ -198,6 +199,7 @@ $(document).ready(function () {
         $("#timer").html("10 seconds")
 
         $("#currentQuestion").html(playMode[currentIndex].prompt);
+        $("#correctAnswer").html("");
 
         shuffle(playMode[currentIndex].choices);
 
@@ -234,6 +236,8 @@ $(document).ready(function () {
                 $("#currentGif").html("<img src='assets/images/gifs/" + playMode[currentIndex].incorrectGif + "'>")
             }
 
+            $("#correctAnswer").html("The answer was " + playMode[currentIndex].correctAnswer);
+
             console.log("right: " + correct + ",wrong: " + incorrect + ",unanswered: " + unanswered);
 
             waitingPage();
@@ -251,6 +255,7 @@ $(document).ready(function () {
             console.log("End Game")
             score = 100 * (correct / playMode.length) + "%";
 
+            $("#correctAnswer").html("");
             $("#playerScore").removeClass("d-none");
             $("#correct").html(correct);
             $("#incorrect").html(incorrect);
