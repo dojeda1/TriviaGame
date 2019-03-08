@@ -120,14 +120,17 @@ $(document).ready(function () {
     var correct = 0;
     var incorrect = 0;
     var unanswered = 0;
+    var score = 0;
 
-    var time = 5;
+    var time = 10;
     var timeRunning = false;
     var currentIndex = 0;
 
 
 
     var playMode = {};
+
+    // randomizes questions or answers
 
     function shuffle(sourceArray) {
         for (var i = 0; i < sourceArray.length - 1; i++) {
@@ -140,10 +143,12 @@ $(document).ready(function () {
         return sourceArray;
     };
 
+    // timed question change functions
+
     function countDown() {
 
         if (timeRunning === false) {
-            time = 5;
+            time = 10;
             timeRunning = true;
             intervalId = setInterval(decrement, 1000);
         };
@@ -157,7 +162,7 @@ $(document).ready(function () {
         if (time === 0) {
             stop();
             unanswered++;
-            time = 5;
+            time = 10;
             console.log("times up");
             endGame();
         }
@@ -167,6 +172,14 @@ $(document).ready(function () {
         timeRunning = false;
         clearInterval(intervalId);
     }
+
+    // show gifs after questions functions
+
+    function showGif() {
+        timedGif = setTimeOut(nextQuestion, 5000);
+        $("#test").html("<img src=" + playMode[currentIndex].correctGif + ">")
+    }
+    // goes to next question
 
     function newQuestion() {
 
@@ -186,7 +199,7 @@ $(document).ready(function () {
             playMode[currentIndex].choices[3] + "</button>");
         console.log("Right Answer: " + playMode[currentIndex].correctAnswer);
 
-        $("#test").html("<img src=" + playMode[currentIndex].correctGif + ">")
+
 
 
         $(".ansButton").on("click", function () {
@@ -221,11 +234,14 @@ $(document).ready(function () {
             newQuestion();
         } else {
             console.log("End Game")
+            score = 100 * (correct / playMode.length) + "%";
 
             $("#playerScore").removeClass("d-none");
             $("#correct").html(correct);
             $("#incorrect").html(incorrect);
             $("#unanswered").html(unanswered);
+            $("#score").html(score);
+
             reset();
         };
     };
@@ -292,14 +308,6 @@ $(document).ready(function () {
 
 
         newQuestion();
-
-
-
-
-
-
-
-
 
     };
 
