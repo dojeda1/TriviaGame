@@ -16,7 +16,7 @@ $(document).ready(function () {
                 "10,000"
             ],
             correctGif: "cat-ruler.gif",
-            incorrectGif: "building-falling.gif",
+            incorrectGif: "fish-faint.gif",
         },
 
         {
@@ -29,7 +29,7 @@ $(document).ready(function () {
                 "10,000"
             ],
             correctGif: "nun-attack.gif",
-            incorrectGif: "building-falling.gif",
+            incorrectGif: "mandm.gif",
         },
 
         {
@@ -42,7 +42,7 @@ $(document).ready(function () {
                 "10,000"
             ],
             correctGif: "spin-ruler.gif",
-            incorrectGif: "building-falling.gif",
+            incorrectGif: "not-true.gif",
         },
 
         {
@@ -55,9 +55,34 @@ $(document).ready(function () {
                 "1,000,000"
             ],
             correctGif: "centimeter-crawl.gif",
-            incorrectGif: "building-falling.gif",
+            incorrectGif: "paul-rudd.gif",
         },
 
+        {
+            prompt: "How many centimeters are in a kilometer?",
+            correctAnswer: "100,000",
+            choices: [
+                "100,000",
+                "10,000",
+                "1000",
+                "1,000,000"
+            ],
+            correctGif: "sailor-scouts.gif",
+            incorrectGif: "throw-notebook.gif",
+        },
+
+        {
+            prompt: "How many millimeters are in a kilometer?",
+            correctAnswer: "1,000,000",
+            choices: [
+                "100,000,000",
+                "10,000",
+                "1000",
+                "1,000,000"
+            ],
+            correctGif: "centimeter-crawl.gif",
+            incorrectGif: "paul-rudd.gif",
+        },
     ];
 
     var hardQuestions = [
@@ -71,8 +96,8 @@ $(document).ready(function () {
                 "2000",
                 "4960"
             ],
-            correctGif: "cat-ruler.gif",
-            incorrectGif: "building-falling.gif",
+            correctGif: "dog-measuring.gif",
+            incorrectGif: "idk-girl.gif",
         },
 
         {
@@ -84,7 +109,7 @@ $(document).ready(function () {
                 "10",
                 "8"
             ],
-            correctGif: "cat-ruler.gif",
+            correctGif: "cheerleaders.gif",
             incorrectGif: "building-falling.gif",
         },
 
@@ -97,8 +122,8 @@ $(document).ready(function () {
                 "5",
                 "8"
             ],
-            correctGif: "cat-ruler.gif",
-            incorrectGif: "building-falling.gif",
+            correctGif: "kid-thumbsup.gif",
+            incorrectGif: "simba-nala.gif",
         },
 
         {
@@ -110,8 +135,86 @@ $(document).ready(function () {
                 "44,720",
                 "52,000"
             ],
-            correctGif: "cat-ruler.gif",
-            incorrectGif: "building-falling.gif",
+            correctGif: "shimmy.gif",
+            incorrectGif: "trump-wrong.gif",
+        },
+
+        {
+            prompt: "How many yards are in a mile?",
+            correctAnswer: "1760",
+            choices: [
+                "1,760",
+                "2,063",
+                "2,280",
+                "1,500"
+            ],
+            correctGif: "football.gif",
+            incorrectGif: "basketball-fall.gif",
+        },
+
+        {
+            prompt: "How many ounces are in a pound?",
+            correctAnswer: "16",
+            choices: [
+                "16",
+                "12",
+                "20",
+                "10"
+            ],
+            correctGif: "scale.gif",
+            incorrectGif: "wide-eyes.gif",
+        },
+
+        {
+            prompt: "How many pounds are in a ton?",
+            correctAnswer: "2,000",
+            choices: [
+                "2,000",
+                "1,600",
+                "3,200",
+                "1,440"
+            ],
+            correctGif: "wig-dancing.gif",
+            incorrectGif: "side-eye.gif",
+        },
+
+        {
+            prompt: "How many ounces are in a ton?",
+            correctAnswer: "32,000",
+            choices: [
+                "32,000",
+                "36,660",
+                "20,000",
+                "28,000"
+            ],
+            correctGif: "tracksuit-clapping.gif",
+            incorrectGif: "scale-fall.gif",
+        },
+
+        {
+            prompt: "How teaspoons ounces are in a tablespoon?",
+            correctAnswer: "3",
+            choices: [
+                "3",
+                "6",
+                "4",
+                "2"
+            ],
+            correctGif: "sugar.gif",
+            incorrectGif: "more-sugar.gif",
+        },
+
+        {
+            prompt: "How tablespoons ounces are in a fluid ounce?",
+            correctAnswer: "2",
+            choices: [
+                "2",
+                "3",
+                "4",
+                "7"
+            ],
+            correctGif: "liz-highfive.gif",
+            incorrectGif: "obama.gif",
         },
 
     ];
@@ -191,7 +294,7 @@ $(document).ready(function () {
 
         gifTimeout = setTimeout(function () {
             endGame();
-        }, 5000);
+        }, 4000);
     }
     // goes to next question
 
@@ -256,7 +359,7 @@ $(document).ready(function () {
             newQuestion();
         } else {
             console.log("End Game")
-            score = 100 * (correct / playMode.length) + "%";
+            score = Math.trunc(100 * (correct / playMode.length)) + "%";
 
             $("#correctAnswer").html("");
             $("#playerScore").removeClass("d-none");
