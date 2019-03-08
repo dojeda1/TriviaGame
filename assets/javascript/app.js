@@ -15,8 +15,8 @@ $(document).ready(function () {
                 "10",
                 "10,000"
             ],
-            correctGif: "assets/images/gifs/cat-ruler.gif",
-            incorrectGif: "assets/images/gifs/building-falling.gif",
+            correctGif: "cat-ruler.gif",
+            incorrectGif: "building-falling.gif",
         },
 
         {
@@ -28,8 +28,8 @@ $(document).ready(function () {
                 "10",
                 "10,000"
             ],
-            correctGif: "assets/images/gifs/nun-attack.gif",
-            incorrectGif: "assets/images/gifs/building-falling.gif",
+            correctGif: "nun-attack.gif",
+            incorrectGif: "building-falling.gif",
         },
 
         {
@@ -41,8 +41,8 @@ $(document).ready(function () {
                 "10",
                 "10,000"
             ],
-            correctGif: "assets/images/gifs/spin-ruler.gif",
-            incorrectGif: "assets/images/gifs/building-falling.gif",
+            correctGif: "spin-ruler.gif",
+            incorrectGif: "building-falling.gif",
         },
 
         {
@@ -54,8 +54,8 @@ $(document).ready(function () {
                 "1000",
                 "1,000,000"
             ],
-            correctGif: "assets/images/gifs/centimeter-crawl.gif",
-            incorrectGif: "assets/images/gifs/building-falling.gif",
+            correctGif: "centimeter-crawl.gif",
+            incorrectGif: "building-falling.gif",
         },
 
     ];
@@ -71,8 +71,8 @@ $(document).ready(function () {
                 "2000",
                 "4960"
             ],
-            correctGif: "assets/images/gifs/cat-ruler.gif",
-            incorrectGif: "assets/images/gifs/building-falling.gif",
+            correctGif: "cat-ruler.gif",
+            incorrectGif: "building-falling.gif",
         },
 
         {
@@ -84,8 +84,8 @@ $(document).ready(function () {
                 "10",
                 "8"
             ],
-            correctGif: "assets/images/gifs/cat-ruler.gif",
-            incorrectGif: "assets/images/gifs/building-falling.gif",
+            correctGif: "cat-ruler.gif",
+            incorrectGif: "building-falling.gif",
         },
 
         {
@@ -97,8 +97,8 @@ $(document).ready(function () {
                 "5",
                 "8"
             ],
-            correctGif: "assets/images/gifs/cat-ruler.gif",
-            incorrectGif: "assets/images/gifs/building-falling.gif",
+            correctGif: "cat-ruler.gif",
+            incorrectGif: "building-falling.gif",
         },
 
         {
@@ -110,8 +110,8 @@ $(document).ready(function () {
                 "44,720",
                 "52,000"
             ],
-            correctGif: "assets/images/gifs/cat-ruler.gif",
-            incorrectGif: "assets/images/gifs/building-falling.gif",
+            correctGif: "cat-ruler.gif",
+            incorrectGif: "building-falling.gif",
         },
 
     ];
@@ -164,7 +164,10 @@ $(document).ready(function () {
             unanswered++;
             time = 10;
             console.log("times up");
-            endGame();
+
+            $("#currentQuestion").html("Out of Time!");
+            $("#currentGif").html("<img src='assets/images/gifs/" + playMode[currentIndex].incorrectGif + "'>")
+            waitingPage();
         }
     }
 
@@ -175,9 +178,16 @@ $(document).ready(function () {
 
     // show gifs after questions functions
 
-    function showGif() {
-        timedGif = setTimeOut(nextQuestion, 5000);
-        $("#currentGif").html("<img src=" + playMode[currentIndex].correctGif + ">")
+    function waitingPage() {
+
+        $("#ans1").html("");
+        $("#ans2").html("");
+        $("#ans3").html("");
+        $("#ans4").html("");
+
+        gifTimeout = setTimeout(function () {
+            endGame();
+        }, 5000);
     }
     // goes to next question
 
@@ -216,28 +226,17 @@ $(document).ready(function () {
 
             if (yourAnswer === playMode[currentIndex].correctAnswer) {
                 correct++;
+                $("#currentQuestion").html("Correct!");
+                $("#currentGif").html("<img src='assets/images/gifs/" + playMode[currentIndex].correctGif + "'>")
             } else {
-                incorrect++
+                incorrect++;
+                $("#currentQuestion").html("Wrong!");
+                $("#currentGif").html("<img src='assets/images/gifs/" + playMode[currentIndex].incorrectGif + "'>")
             }
 
-
-
             console.log("right: " + correct + ",wrong: " + incorrect + ",unanswered: " + unanswered);
-            $("#currentGif").html("<img src=" + playMode[currentIndex].correctGif + ">")
 
-            $("#currentQuestion").html("");
-            $("#ans1").html("");
-            $("#ans2").html("");
-            $("#ans3").html("");
-            $("#ans4").html("");
-
-            gifTimeout = setTimeout(function () {
-
-                endGame();
-            }, 5000);
-
-
-
+            waitingPage();
 
         });
 
