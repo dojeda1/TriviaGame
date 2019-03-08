@@ -17,18 +17,27 @@
 
     <div class="container">
         <h1>Trivia Game</h1>
-        <h2 id="timer" class="d-none">15</h2>
-        <h2 id="currentQuestion" class="d-none"></h2>
+        <h2 id="timer"></h2>
+        <h2 id="currentQuestion"></h2>
 
         <div class="list-group">
 
-            <button id="ans1" class="ansButton list-group-item list-group-item-action d-none"></button>
-            <button id="ans2" class="ansButton list-group-item list-group-item-action d-none"></button>
-            <button id="ans3" class="ansButton list-group-item list-group-item-action d-none"></button>
-            <button id="ans4" class="ansButton list-group-item list-group-item-action d-none"></button>
+            <div id="ans1">
+
+            </div>
+            <div id="ans2">
+
+            </div>
+            <div id="ans3">
+
+            </div>
+            <div id="ans4">
+
+            </div>
         </div>
 
-        <div id="playerScore">
+
+        <div id="playerScore" class="d-none">
             <p>Correct: <span id="correct"></span></p>
             <p>Incorrect: <span id="incorrect"></span></p>
             <p>Unanswered: <span id="unanswered"></span></p>
@@ -36,8 +45,12 @@
 
         </div>
 
-        <button id="easyButton" type="button" class="startButton btn btn-primary">Easy</button>
-        <button id="hardButton" type="button" class="startButton btn btn-primary">Hard</button>
+        <div id="easyStartDiv">
+
+        </div>
+        <div id="hardStartDiv">
+
+        </div>
     </div>
 
 
