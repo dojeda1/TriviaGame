@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Caveat+Brush|Homemade+Apple|Rock+Salt');
+
+/* font-family: 'Rock Salt',
+cursive;
+font-family: 'Homemade Apple',
+cursive;
+font-family: 'Caveat Brush',
+cursive; */
+
+.font1 {
+    font-family: 'Rock Salt',
+        cursive;
+}
+
+.font2 {
+    font-family: 'Homemade Apple',
+        cursive;
+}
+
+.font3 {
+    font-family: 'Caveat Brush',
+        cursive;
+}
+
+body {
+    background-image: url("../images/dark_brick_wall_@2X.png");
+    font-family: 'Homemade Apple',
+        cursive;
+}
+
+#board {
+    background-image: url("../images/chalkboard.jpg");
+
+    width: 100%;
+    min-height: 600px;
+
+    font-size: 200%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

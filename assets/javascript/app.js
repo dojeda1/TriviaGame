@@ -1,8 +1,8 @@
 $(document).ready(function () {
 
+
+
     //  Game Mode Objects
-
-
 
     var easyQuestions = [
 
@@ -125,10 +125,13 @@ $(document).ready(function () {
     var time = 10;
     var timeRunning = false;
     var currentIndex = 0;
+    var gameStarted = false;
 
 
 
     var playMode = {};
+
+
 
     // randomizes questions or answers
 
@@ -167,7 +170,7 @@ $(document).ready(function () {
 
             $("#currentQuestion").html("Out of Time!");
             $("#correctAnswer").html("The answer was " + playMode[currentIndex].correctAnswer);
-            $("#currentGif").html("<img src='assets/images/gifs/" + playMode[currentIndex].incorrectGif + "'>")
+            $("#currentGif").html("<img src='assets/images/gifs/times-up.gif'>")
             waitingPage();
         }
     }
@@ -274,7 +277,12 @@ $(document).ready(function () {
         currentIndex = 0;
 
         $("#timer").html("");
-        $("#currentQuestion").html("");
+
+        if (gameStarted === true) {
+            $("#currentQuestion").html("");
+        } else {
+            $("#currentQuestion").html("Go ahead and see how well you know your measurements! Click either button below to play.");
+        }
 
         $("#ans1").html("");
         $("#ans2").html("");
@@ -304,6 +312,7 @@ $(document).ready(function () {
     // Starts Game Mode
 
     $(".startButton").on("click", function () {
+        gameStarted = true;
         var selection = this.id
         if (selection === "easyButton") {
             playMode = easyQuestions;
