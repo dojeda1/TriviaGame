@@ -177,13 +177,15 @@ $(document).ready(function () {
 
     function showGif() {
         timedGif = setTimeOut(nextQuestion, 5000);
-        $("#test").html("<img src=" + playMode[currentIndex].correctGif + ">")
+        $("#currentGif").html("<img src=" + playMode[currentIndex].correctGif + ">")
     }
     // goes to next question
 
     function newQuestion() {
 
         countDown();
+
+        $("#timer").html("10 seconds")
 
         $("#currentQuestion").html(playMode[currentIndex].prompt);
 
@@ -197,6 +199,9 @@ $(document).ready(function () {
             playMode[currentIndex].choices[2] + "</button>");
         $("#ans4").html("<button class='ansButton list-group-item list-group-item-action'>" +
             playMode[currentIndex].choices[3] + "</button>");
+
+        $("#currentGif").html("");
+
         console.log("Right Answer: " + playMode[currentIndex].correctAnswer);
 
 
@@ -218,9 +223,20 @@ $(document).ready(function () {
 
 
             console.log("right: " + correct + ",wrong: " + incorrect + ",unanswered: " + unanswered);
+            $("#currentGif").html("<img src=" + playMode[currentIndex].correctGif + ">")
+
+            $("#currentQuestion").html("");
+            $("#ans1").html("");
+            $("#ans2").html("");
+            $("#ans3").html("");
+            $("#ans4").html("");
+
+            gifTimeout = setTimeout(function () {
+
+                endGame();
+            }, 5000);
 
 
-            endGame();
 
 
         });
@@ -265,7 +281,7 @@ $(document).ready(function () {
         $("#hardStartDiv").html('<button id="hardButton" type="button" class="startButton btn btn-primary">Hard</button>');
         console.log("reset");
 
-        $("#test").html("");
+        $("#currentGif").html("");
 
         $(".startButton").on("click", function () {
             var selection = this.id
