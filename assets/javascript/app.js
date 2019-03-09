@@ -107,8 +107,8 @@ $(document).ready(function () {
                 "1,000,000",
                 "10"
             ],
-            correctGif: "",
-            incorrectGif: "",
+            correctGif: "kid-thumbsup.gif",
+            incorrectGif: "wrong-note.gif",
         },
 
         {
@@ -120,8 +120,8 @@ $(document).ready(function () {
                 "1,000,000",
                 "10"
             ],
-            correctGif: "",
-            incorrectGif: "",
+            correctGif: "elephant-ribbon.gif",
+            incorrectGif: "elephant-fall.gif",
         },
 
         {
@@ -133,8 +133,8 @@ $(document).ready(function () {
                 "1,000,000",
                 "10"
             ],
-            correctGif: "",
-            incorrectGif: "",
+            correctGif: "hangover-cards.gif",
+            incorrectGif: "confused-girl.gif",
         },
 
         {
@@ -146,8 +146,8 @@ $(document).ready(function () {
                 "1,000",
                 "1,000,000"
             ],
-            correctGif: "",
-            incorrectGif: "",
+            correctGif: "water-win.gif",
+            incorrectGif: "water-fail.gif",
         },
 
         {
@@ -159,8 +159,8 @@ $(document).ready(function () {
                 "1,000",
                 "100"
             ],
-            correctGif: "",
-            incorrectGif: "",
+            correctGif: "waterfall.gif",
+            incorrectGif: "puddle.gif",
         },
 
         {
@@ -172,8 +172,8 @@ $(document).ready(function () {
                 "-10",
                 "50"
             ],
-            correctGif: "",
-            incorrectGif: "",
+            correctGif: "freezing-bulb.gif",
+            incorrectGif: "in-ice",
         },
 
         {
@@ -185,8 +185,8 @@ $(document).ready(function () {
                 "50",
                 "80"
             ],
-            correctGif: "",
-            incorrectGif: "",
+            correctGif: "chili.gif",
+            incorrectGif: "turkey-fire.gif",
         },
 
     ];
@@ -384,21 +384,21 @@ $(document).ready(function () {
                 "40",
                 "12"
             ],
-            correctGif: "",
-            incorrectGif: "",
+            correctGif: "ice-tower",
+            incorrectGif: "ice-falling",
         },
 
         {
             prompt: "What is the boiling point of water in Fahrenheit",
-            correctAnswer: "212&deg;",
+            correctAnswer: "212",
             choices: [
-                "212&deg;",
-                "180&deg;",
-                "100&deg;",
-                "150&deg;"
+                "212",
+                "180",
+                "100",
+                "150"
             ],
-            correctGif: "",
-            incorrectGif: "",
+            correctGif: "happy-kettle.gif",
+            incorrectGif: "drop-kettle.gif",
         },
 
 
