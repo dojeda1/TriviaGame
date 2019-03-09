@@ -192,7 +192,7 @@ $(document).ready(function () {
         },
 
         {
-            prompt: "How teaspoons ounces are in a tablespoon?",
+            prompt: "How many teaspoons are in a tablespoon?",
             correctAnswer: "3",
             choices: [
                 "3",
@@ -205,7 +205,7 @@ $(document).ready(function () {
         },
 
         {
-            prompt: "How tablespoons ounces are in a fluid ounce?",
+            prompt: "How many tablespoon are in a fluid ounce?",
             correctAnswer: "2",
             choices: [
                 "2",
@@ -224,11 +224,15 @@ $(document).ready(function () {
     var incorrect = 0;
     var unanswered = 0;
     var score = 0;
+    var easyHighScore = "";
+    var hardHighScore = "";
 
     var time = 10;
     var timeRunning = false;
     var currentIndex = 0;
     var gameStarted = false;
+    var playingEasy = false;
+    var playingHard = false;
 
 
 
@@ -368,6 +372,19 @@ $(document).ready(function () {
             $("#unanswered").html(unanswered);
             $("#score").html(score);
 
+            if (playingEasy === true) {
+                if (score > easyHighScore) {
+                    easyHighScore = score;
+                }
+                $("#easyHighScore").html("High Score: " + easyHighScore);
+                $("#hardHighScore").html("High Score: " + hardHighScore);
+            } else if (playingHard === true) {
+                if (score > hardHighScore) {
+                    hardHighScore = score;
+                }
+                $("#easyHighScore").html("High Score: " + easyHighScore);
+                $("#hardHighScore").html("High Score: " + hardHighScore);
+            };
             reset();
         };
     };
@@ -378,6 +395,9 @@ $(document).ready(function () {
         incorrect = 0;
         unanswered = 0;
         currentIndex = 0;
+
+        playingEasy = false;
+        playingHard = false;
 
         $("#timer").html("");
 
@@ -399,11 +419,17 @@ $(document).ready(function () {
         $("#currentGif").html("");
 
         $(".startButton").on("click", function () {
+
+            $("#easyHighScore").html("");
+            $("#hardHighScore").html("");
+
             var selection = this.id
             if (selection === "easyButton") {
                 playMode = easyQuestions;
+                playingEasy = true;
             } else if (selection === "hardButton") {
                 playMode = hardQuestions;
+                playingHard = true;
             }
 
             playGame();
