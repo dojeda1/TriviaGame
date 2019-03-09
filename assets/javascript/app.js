@@ -16,7 +16,7 @@ $(document).ready(function () {
                 "10,000"
             ],
             correctGif: "cat-ruler.gif",
-            incorrectGif: "fish-faint.gif",
+            incorrectGif: "chew-book.gif",
         },
 
         {
@@ -28,8 +28,8 @@ $(document).ready(function () {
                 "10",
                 "10,000"
             ],
-            correctGif: "old-fist.gif",
-            incorrectGif: "mandm.gif",
+            correctGif: "measuring-catch.gif",
+            incorrectGif: "measuring-fall.gif",
         },
 
         {
@@ -67,7 +67,7 @@ $(document).ready(function () {
                 "1,000",
                 "1,000,000"
             ],
-            correctGif: "sailor-scouts.gif",
+            correctGif: "papers-flying.gif",
             incorrectGif: "throw-notebook.gif",
         },
 
@@ -81,8 +81,8 @@ $(document).ready(function () {
                 "1,000",
                 "1,000,000"
             ],
-            correctGif: "cute-wink.gif",
-            incorrectGif: "nun-attack.gif",
+            correctGif: "rocket-launch.gif",
+            incorrectGif: "rocket-explode.gif",
         },
 
         {
@@ -94,8 +94,8 @@ $(document).ready(function () {
                 "1,000,000",
                 "10"
             ],
-            correctGif: "",
-            incorrectGif: "",
+            correctGif: "mixer-win.gif",
+            incorrectGif: "mixer-fail.gif",
         },
 
         {
@@ -145,6 +145,19 @@ $(document).ready(function () {
                 "10,000",
                 "1,000",
                 "1,000,000"
+            ],
+            correctGif: "",
+            incorrectGif: "",
+        },
+
+        {
+            prompt: "How many liters are in a kiloliter?",
+            correctAnswer: "1,000",
+            choices: [
+                "100,000",
+                "10,000",
+                "1,000",
+                "100"
             ],
             correctGif: "",
             incorrectGif: "",
@@ -202,7 +215,7 @@ $(document).ready(function () {
                 "10",
                 "8"
             ],
-            correctGif: "cheerleaders.gif",
+            correctGif: "building-create.gif",
             incorrectGif: "building-falling.gif",
         },
 
@@ -215,8 +228,8 @@ $(document).ready(function () {
                 "5",
                 "8"
             ],
-            correctGif: "kid-thumbsup.gif",
-            incorrectGif: "simba-nala.gif",
+            correctGif: "nun-yardstick.gif",
+            incorrectGif: "nun-attack.gif",
         },
 
         {
@@ -228,7 +241,7 @@ $(document).ready(function () {
                 "44,720",
                 "52,000"
             ],
-            correctGif: "shimmy.gif",
+            correctGif: "know-everything.gif",
             incorrectGif: "trump-wrong.gif",
         },
 
@@ -255,7 +268,7 @@ $(document).ready(function () {
                 "10"
             ],
             correctGif: "scale.gif",
-            incorrectGif: "wide-eyes.gif",
+            incorrectGif: "scale-fail.gif",
         },
 
         {
@@ -267,8 +280,8 @@ $(document).ready(function () {
                 "3,200",
                 "1,440"
             ],
-            correctGif: "wig-dancing.gif",
-            incorrectGif: "side-eye.gif",
+            correctGif: "fridge.gif",
+            incorrectGif: "drop-weights.gif",
         },
 
         {
@@ -280,8 +293,8 @@ $(document).ready(function () {
                 "20,000",
                 "28,000"
             ],
-            correctGif: "tracksuit-clapping.gif",
-            incorrectGif: "scale-fall.gif",
+            correctGif: "shimmy.gif",
+            incorrectGif: "wide-eyes.gif",
         },
 
         {
@@ -319,8 +332,8 @@ $(document).ready(function () {
                 "12",
                 "4"
             ],
-            correctGif: "",
-            incorrectGif: "",
+            correctGif: "measure-cup.gif",
+            incorrectGif: "spaghetti-full.gif",
         },
 
         {
@@ -332,8 +345,8 @@ $(document).ready(function () {
                 "5",
                 "2"
             ],
-            correctGif: "",
-            incorrectGif: "",
+            correctGif: "britney-cake.gif",
+            incorrectGif: "cake-hand.gif",
         },
 
         {
@@ -345,8 +358,8 @@ $(document).ready(function () {
                 "3",
                 "2"
             ],
-            correctGif: "",
-            incorrectGif: "",
+            correctGif: "beer.gif",
+            incorrectGif: "beer-fail.gif",
         },
 
         {
@@ -358,18 +371,18 @@ $(document).ready(function () {
                 "3",
                 "2"
             ],
-            correctGif: "",
-            incorrectGif: "",
+            correctGif: "drink-milk.gif",
+            incorrectGif: "milk-fail.gif",
         },
 
         {
             prompt: "What is the freezing point of water in Fahrenheit",
-            correctAnswer: "32&deg;",
+            correctAnswer: "32",
             choices: [
-                "32&deg;",
-                "0&deg;",
-                "40&deg;",
-                "12&deg;"
+                "32",
+                "0",
+                "40",
+                "12"
             ],
             correctGif: "",
             incorrectGif: "",
