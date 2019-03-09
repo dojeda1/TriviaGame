@@ -8,9 +8,9 @@ $(document).ready(function () {
 
         {
             prompt: "How many meters are in a kilometer?",
-            correctAnswer: "1000",
+            correctAnswer: "1,000",
             choices: [
-                "1000",
+                "1,000",
                 "100",
                 "10",
                 "10,000"
@@ -23,20 +23,20 @@ $(document).ready(function () {
             prompt: "How many centimeters are in a meter?",
             correctAnswer: "100",
             choices: [
-                "1000",
+                "1,000",
                 "100",
                 "10",
                 "10,000"
             ],
-            correctGif: "nun-attack.gif",
+            correctGif: "old-fist.gif",
             incorrectGif: "mandm.gif",
         },
 
         {
             prompt: "How many millimeters are in a meter?",
-            correctAnswer: "1000",
+            correctAnswer: "1,000",
             choices: [
-                "1000",
+                "1,000",
                 "100",
                 "10",
                 "10,000"
@@ -51,7 +51,7 @@ $(document).ready(function () {
             choices: [
                 "100,000,000",
                 "10,000",
-                "1000",
+                "1,000",
                 "1,000,000"
             ],
             correctGif: "centimeter-crawl.gif",
@@ -64,12 +64,13 @@ $(document).ready(function () {
             choices: [
                 "100,000",
                 "10,000",
-                "1000",
+                "1,000",
                 "1,000,000"
             ],
             correctGif: "sailor-scouts.gif",
             incorrectGif: "throw-notebook.gif",
         },
+
 
         {
             prompt: "How many millimeters are in a kilometer?",
@@ -77,12 +78,104 @@ $(document).ready(function () {
             choices: [
                 "100,000,000",
                 "10,000",
-                "1000",
+                "1,000",
                 "1,000,000"
             ],
-            correctGif: "centimeter-crawl.gif",
-            incorrectGif: "paul-rudd.gif",
+            correctGif: "cute-wink.gif",
+            incorrectGif: "nun-attack.gif",
         },
+
+        {
+            prompt: "How many milligrams are in a gram?",
+            correctAnswer: "1,000",
+            choices: [
+                "1,000",
+                "100",
+                "1,000,000",
+                "10"
+            ],
+            correctGif: "",
+            incorrectGif: "",
+        },
+
+        {
+            prompt: "How many grams are in a kilogram?",
+            correctAnswer: "1,000",
+            choices: [
+                "1,000",
+                "100",
+                "1,000,000",
+                "10"
+            ],
+            correctGif: "",
+            incorrectGif: "",
+        },
+
+        {
+            prompt: "How many kilogram are in a metric ton?",
+            correctAnswer: "1,000",
+            choices: [
+                "1,000",
+                "100",
+                "1,000,000",
+                "10"
+            ],
+            correctGif: "",
+            incorrectGif: "",
+        },
+
+        {
+            prompt: "How many milligrams are in a kilogram?",
+            correctAnswer: "1,000,000",
+            choices: [
+                "1,000",
+                "100",
+                "1,000,000",
+                "10"
+            ],
+            correctGif: "",
+            incorrectGif: "",
+        },
+
+        {
+            prompt: "How many milliliters are in a liter?",
+            correctAnswer: "1,000",
+            choices: [
+                "100,000",
+                "10,000",
+                "1,000",
+                "1,000,000"
+            ],
+            correctGif: "",
+            incorrectGif: "",
+        },
+
+        {
+            prompt: "What is the freezing point of water in Celsius",
+            correctAnswer: "0",
+            choices: [
+                "0",
+                "100",
+                "-10",
+                "50"
+            ],
+            correctGif: "",
+            incorrectGif: "",
+        },
+
+        {
+            prompt: "What is the boiling point of water in Celsius",
+            correctAnswer: "100",
+            choices: [
+                "100",
+                "200",
+                "50",
+                "80"
+            ],
+            correctGif: "",
+            incorrectGif: "",
+        },
+
     ];
 
     var hardQuestions = [
@@ -205,7 +298,7 @@ $(document).ready(function () {
         },
 
         {
-            prompt: "How many tablespoon are in a fluid ounce?",
+            prompt: "How many tablespoons are in a fluid ounce?",
             correctAnswer: "2",
             choices: [
                 "2",
@@ -217,6 +310,85 @@ $(document).ready(function () {
             incorrectGif: "obama.gif",
         },
 
+        {
+            prompt: "How many fluid ounces are in a cup?",
+            correctAnswer: "8",
+            choices: [
+                "8",
+                "16",
+                "12",
+                "4"
+            ],
+            correctGif: "",
+            incorrectGif: "",
+        },
+
+        {
+            prompt: "How many cups are in a pint",
+            correctAnswer: "2",
+            choices: [
+                "8",
+                "4",
+                "5",
+                "2"
+            ],
+            correctGif: "",
+            incorrectGif: "",
+        },
+
+        {
+            prompt: "How many pints are in a quart",
+            correctAnswer: "2",
+            choices: [
+                "12",
+                "4",
+                "3",
+                "2"
+            ],
+            correctGif: "",
+            incorrectGif: "",
+        },
+
+        {
+            prompt: "How many quarts are in a gallon",
+            correctAnswer: "4",
+            choices: [
+                "8",
+                "4",
+                "3",
+                "2"
+            ],
+            correctGif: "",
+            incorrectGif: "",
+        },
+
+        {
+            prompt: "What is the freezing point of water in Fahrenheit",
+            correctAnswer: "32&deg;",
+            choices: [
+                "32&deg;",
+                "0&deg;",
+                "40&deg;",
+                "12&deg;"
+            ],
+            correctGif: "",
+            incorrectGif: "",
+        },
+
+        {
+            prompt: "What is the boiling point of water in Fahrenheit",
+            correctAnswer: "212&deg;",
+            choices: [
+                "212&deg;",
+                "180&deg;",
+                "100&deg;",
+                "150&deg;"
+            ],
+            correctGif: "",
+            incorrectGif: "",
+        },
+
+
     ];
 
 
@@ -224,8 +396,11 @@ $(document).ready(function () {
     var incorrect = 0;
     var unanswered = 0;
     var score = 0;
-    var easyHighScore = "";
-    var hardHighScore = "";
+    var scorePercent = ""
+    var easyHighScore = 0;
+    var easyHighScorePercent = "";
+    var hardHighScore = 0;
+    var hardHighScorePercent = "";
 
     var time = 10;
     var timeRunning = false;
@@ -239,7 +414,8 @@ $(document).ready(function () {
     var playMode = {};
 
 
-
+    console.log("Easy Q# " + easyQuestions.length);
+    console.log("Hard Q# " + hardQuestions.length);
     // randomizes questions or answers
 
     function shuffle(sourceArray) {
@@ -367,29 +543,54 @@ $(document).ready(function () {
             currentIndex++;
             console.log("currentIndex: " + currentIndex)
             newQuestion();
+
         } else {
             console.log("End Game")
-            score = Math.trunc(100 * (correct / playMode.length)) + "%";
+
+            score = correct / playMode.length
+            scorePercent = Math.trunc(100 * (score)) + "%";
 
             $("#correctAnswer").html("");
             $("#playerScore").removeClass("d-none");
             $("#correct").html(correct);
             $("#incorrect").html(incorrect);
             $("#unanswered").html(unanswered);
-            $("#score").html(score);
+            $("#score").html(scorePercent);
 
             if (playingEasy === true) {
                 if (score > easyHighScore) {
                     easyHighScore = score;
+                    easyHighScorePercent = scorePercent;
+                    console.log("score: " + score);
+                    console.log("Escore: " + easyHighScore)
+
+                    $("#easyHighScore").html("<span class='text-warning'>New High Score: " + easyHighScorePercent) + "</span>";
+                    $("#hardHighScore").html("High Score: " + hardHighScorePercent);
+                } else {
+                    console.log("not a high score")
+
+                    $("#easyHighScore").html("High Score: " + easyHighScorePercent);
+                    $("#hardHighScore").html("High Score: " + hardHighScorePercent);
+
                 }
-                $("#easyHighScore").html("High Score: " + easyHighScore);
-                $("#hardHighScore").html("High Score: " + hardHighScore);
             } else if (playingHard === true) {
                 if (score > hardHighScore) {
                     hardHighScore = score;
+                    hardHighScorePercent = scorePercent;
+                    console.log("score: " + score);
+                    console.log("Hscore: " + hardHighScore)
+
+                    $("#easyHighScore").html("High Score: " + easyHighScorePercent);
+                    $("#hardHighScore").html("<span class='text-warning'>New High Score: " + hardHighScorePercent + "</span>");
+
+                } else {
+                    console.log("not a high score")
+
+                    $("#easyHighScore").html("High Score: " + easyHighScorePercent);
+                    $("#hardHighScore").html("High Score: " + hardHighScorePercent);
+
                 }
-                $("#easyHighScore").html("High Score: " + easyHighScore);
-                $("#hardHighScore").html("High Score: " + hardHighScore);
+
             };
             reset();
         };
