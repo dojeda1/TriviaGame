@@ -299,6 +299,12 @@ $(document).ready(function () {
         gifTimeout = setTimeout(function () {
             endGame();
         }, 4000);
+
+        $("img").on("click", function () {
+            clearTimeout(gifTimeout);
+            console.log("clear timeout")
+            endGame();
+        });
     }
     // goes to next question
 
