@@ -54,8 +54,8 @@ $(document).ready(function () {
                 "1,000",
                 "1,000,000"
             ],
-            correctGif: "centimeter-crawl.gif",
-            incorrectGif: "paul-rudd.gif",
+            correctGif: "rocket-launch.gif",
+            incorrectGif: "rocket-explode.gif",
         },
 
         {
@@ -67,22 +67,22 @@ $(document).ready(function () {
                 "1,000",
                 "1,000,000"
             ],
-            correctGif: "papers-flying.gif",
-            incorrectGif: "throw-notebook.gif",
+            correctGif: "centimeter-crawl.gif",
+            incorrectGif: "paul-rudd.gif",
         },
 
 
         {
-            prompt: "How many millimeters are in a kilometer?",
-            correctAnswer: "1,000,000",
+            prompt: "How many milligrams are in a metric ton?",
+            correctAnswer: "1,000,000,000",
             choices: [
-                "100,000,000",
+                "1,000,000,000",
                 "10,000",
                 "1,000",
                 "1,000,000"
             ],
-            correctGif: "rocket-launch.gif",
-            incorrectGif: "rocket-explode.gif",
+            correctGif: "papers-flying.gif",
+            incorrectGif: "throw-notebook.gif",
         },
 
         {
@@ -112,7 +112,7 @@ $(document).ready(function () {
         },
 
         {
-            prompt: "How many kilogram are in a metric ton?",
+            prompt: "How many kilograms are in a metric ton?",
             correctAnswer: "1,000",
             choices: [
                 "1,000",
@@ -164,7 +164,7 @@ $(document).ready(function () {
         },
 
         {
-            prompt: "What is the freezing point of water in Celsius",
+            prompt: "What is the freezing point of water in Celsius?",
             correctAnswer: "0",
             choices: [
                 "0",
@@ -173,11 +173,11 @@ $(document).ready(function () {
                 "50"
             ],
             correctGif: "freezing-bulb.gif",
-            incorrectGif: "in-ice",
+            incorrectGif: "in-ice.gif",
         },
 
         {
-            prompt: "What is the boiling point of water in Celsius",
+            prompt: "What is the boiling point of water in Celsius?",
             correctAnswer: "100",
             choices: [
                 "100",
@@ -228,7 +228,7 @@ $(document).ready(function () {
                 "5",
                 "8"
             ],
-            correctGif: "nun-yardstick.gif",
+            correctGif: "nun-sing.gif",
             incorrectGif: "nun-attack.gif",
         },
 
@@ -247,7 +247,7 @@ $(document).ready(function () {
 
         {
             prompt: "How many yards are in a mile?",
-            correctAnswer: "1760",
+            correctAnswer: "1,760",
             choices: [
                 "1,760",
                 "2,063",
@@ -268,7 +268,7 @@ $(document).ready(function () {
                 "10"
             ],
             correctGif: "scale.gif",
-            incorrectGif: "scale-fail.gif",
+            incorrectGif: "scale-fall.gif",
         },
 
         {
@@ -306,7 +306,7 @@ $(document).ready(function () {
                 "4",
                 "2"
             ],
-            correctGif: "sugar.gif",
+            correctGif: "sugar-spoon.gif",
             incorrectGif: "more-sugar.gif",
         },
 
@@ -319,7 +319,7 @@ $(document).ready(function () {
                 "4",
                 "7"
             ],
-            correctGif: "liz-highfive.gif",
+            correctGif: "cute-wink.gif",
             incorrectGif: "obama.gif",
         },
 
@@ -337,7 +337,7 @@ $(document).ready(function () {
         },
 
         {
-            prompt: "How many cups are in a pint",
+            prompt: "How many cups are in a pint?",
             correctAnswer: "2",
             choices: [
                 "8",
@@ -350,7 +350,7 @@ $(document).ready(function () {
         },
 
         {
-            prompt: "How many pints are in a quart",
+            prompt: "How many pints are in a quart?",
             correctAnswer: "2",
             choices: [
                 "12",
@@ -363,7 +363,7 @@ $(document).ready(function () {
         },
 
         {
-            prompt: "How many quarts are in a gallon",
+            prompt: "How many quarts are in a gallon?",
             correctAnswer: "4",
             choices: [
                 "8",
@@ -376,7 +376,7 @@ $(document).ready(function () {
         },
 
         {
-            prompt: "What is the freezing point of water in Fahrenheit",
+            prompt: "What is the freezing point of water in Fahrenheit?",
             correctAnswer: "32",
             choices: [
                 "32",
@@ -384,12 +384,12 @@ $(document).ready(function () {
                 "40",
                 "12"
             ],
-            correctGif: "ice-tower",
-            incorrectGif: "ice-falling",
+            correctGif: "ice-tower.gif",
+            incorrectGif: "ice-falling.gif",
         },
 
         {
-            prompt: "What is the boiling point of water in Fahrenheit",
+            prompt: "What is the boiling point of water in Fahrenheit?",
             correctAnswer: "212",
             choices: [
                 "212",
@@ -404,15 +404,16 @@ $(document).ready(function () {
 
     ];
 
+    // global variables
 
     var correct = 0;
     var incorrect = 0;
     var unanswered = 0;
     var score = 0;
     var scorePercent = ""
-    var easyHighScore = 0;
+    var easyHighScore = -1;
     var easyHighScorePercent = "";
-    var hardHighScore = 0;
+    var hardHighScore = -1;
     var hardHighScorePercent = "";
 
     var time = 10;
@@ -422,13 +423,11 @@ $(document).ready(function () {
     var playingEasy = false;
     var playingHard = false;
 
-
-
     var playMode = {};
-
 
     console.log("Easy Q# " + easyQuestions.length);
     console.log("Hard Q# " + hardQuestions.length);
+
     // randomizes questions or answers
 
     function shuffle(sourceArray) {
@@ -519,6 +518,7 @@ $(document).ready(function () {
 
         $("#currentGif").html("");
 
+        console.log(playMode[currentIndex].prompt)
         console.log("Right Answer: " + playMode[currentIndex].correctAnswer);
 
 
@@ -533,11 +533,11 @@ $(document).ready(function () {
 
             if (yourAnswer === playMode[currentIndex].correctAnswer) {
                 correct++;
-                $("#currentQuestion").html("Correct!");
+                $("#currentQuestion").html("<span class='text-warning'>Correct!</span>");
                 $("#currentGif").html("<img src='assets/images/gifs/" + playMode[currentIndex].correctGif + "'>")
             } else {
                 incorrect++;
-                $("#currentQuestion").html("Wrong!");
+                $("#currentQuestion").html("<span class='text-warning'>Wrong!</span>");
                 $("#currentGif").html("<img src='assets/images/gifs/" + playMode[currentIndex].incorrectGif + "'>")
             }
 
@@ -624,7 +624,7 @@ $(document).ready(function () {
         if (gameStarted === true) {
             $("#currentQuestion").html("");
         } else {
-            $("#currentQuestion").html("Go ahead and see how well you know your measurements! Click either button below to play.");
+            $("#currentQuestion").html("How well do you know your measurements? Click either button below to play!");
         }
 
         $("#ans1").html("");
