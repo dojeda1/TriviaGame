@@ -164,7 +164,7 @@ $(document).ready(function () {
         },
 
         {
-            prompt: "What is the freezing point of water in Celsius?",
+            prompt: "What is the freezing point of water in degrees Celsius?",
             correctAnswer: "0",
             choices: [
                 "0",
@@ -177,7 +177,7 @@ $(document).ready(function () {
         },
 
         {
-            prompt: "What is the boiling point of water in Celsius?",
+            prompt: "What is the boiling point of water in degrees Celsius?",
             correctAnswer: "100",
             choices: [
                 "100",
@@ -376,7 +376,7 @@ $(document).ready(function () {
         },
 
         {
-            prompt: "What is the freezing point of water in Fahrenheit?",
+            prompt: "What is the freezing point of water in degrees Fahrenheit?",
             correctAnswer: "32",
             choices: [
                 "32",
@@ -389,7 +389,7 @@ $(document).ready(function () {
         },
 
         {
-            prompt: "What is the boiling point of water in Fahrenheit?",
+            prompt: "What is the boiling point of water in degrees Fahrenheit?",
             correctAnswer: "212",
             choices: [
                 "212",
