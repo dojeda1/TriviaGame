@@ -404,6 +404,8 @@ $(document).ready(function () {
 
     ];
 
+    var outOfTimeGifs = ["death-star.gif", "independence.gif", "woman-phone.gif", "judy.gif", "time-for-that.gif", "siren.gif", "reggie.gif", "hourglass.gif", "clocks.gif"]
+
     // global variables
 
     var correct = 0;
@@ -463,9 +465,13 @@ $(document).ready(function () {
             time = 10;
             console.log("times up");
 
-            $("#currentQuestion").html("Out of Time!");
+            $("#currentQuestion").html("<span class='text-warning'>Out of Time!</span>");
             $("#correctAnswer").html("The answer was " + playMode[currentIndex].correctAnswer);
-            $("#currentGif").html("<img src='assets/images/gifs/times-up.gif'>")
+
+            var randNum = Math.floor(Math.random() * outOfTimeGifs.length);
+            console.log(randNum);
+
+            $("#currentGif").html("<img src='assets/images/gifs/" + outOfTimeGifs[randNum] + "'>")
             waitingPage();
         }
     }
