@@ -45,3 +45,7 @@ body {
 img {
     width: 100%;
 }
+
+.text-50 {
+    font-size: 50%;
+}

@@ -417,6 +417,7 @@ $(document).ready(function () {
     var easyHighScorePercent = "";
     var hardHighScore = -1;
     var hardHighScorePercent = "";
+    var questionCount = 0;
 
     var time = 10;
     var timeRunning = false;
@@ -524,6 +525,9 @@ $(document).ready(function () {
 
         $("#currentGif").html("");
 
+        questionCount++;
+        $("#questionCount").html("Question " + questionCount + " of " + playMode.length);
+
         console.log(playMode[currentIndex].prompt)
         console.log("Right Answer: " + playMode[currentIndex].correctAnswer);
 
@@ -575,6 +579,7 @@ $(document).ready(function () {
             $("#incorrect").html(incorrect);
             $("#unanswered").html(unanswered);
             $("#score").html(scorePercent);
+            $("#questionCount").html("");
 
             if (playingEasy === true) {
                 if (score > easyHighScore) {
@@ -621,6 +626,7 @@ $(document).ready(function () {
         incorrect = 0;
         unanswered = 0;
         currentIndex = 0;
+        questionCount = 0;
 
         playingEasy = false;
         playingHard = false;
@@ -665,18 +671,6 @@ $(document).ready(function () {
     reset();
 
     // Starts Game Mode
-
-    $(".startButton").on("click", function () {
-        gameStarted = true;
-        var selection = this.id
-        if (selection === "easyButton") {
-            playMode = easyQuestions;
-        } else if (selection === "hardButton") {
-            playMode = hardQuestions;
-        }
-
-        playGame();
-    });
 
     function playGame() {
 
