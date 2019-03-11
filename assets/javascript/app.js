@@ -15,6 +15,7 @@ $(document).ready(function () {
                 "10",
                 "10,000"
             ],
+            abr: "m",
             correctGif: "cat-ruler.gif",
             incorrectGif: "chew-book.gif",
         },
@@ -28,6 +29,7 @@ $(document).ready(function () {
                 "10",
                 "10,000"
             ],
+            abr: "cm",
             correctGif: "measuring-catch.gif",
             incorrectGif: "measuring-fall.gif",
         },
@@ -41,6 +43,7 @@ $(document).ready(function () {
                 "10",
                 "10,000"
             ],
+            abr: "mm",
             correctGif: "spin-ruler.gif",
             incorrectGif: "not-true.gif",
         },
@@ -54,6 +57,7 @@ $(document).ready(function () {
                 "1,000",
                 "1,000,000"
             ],
+            abr: "mm",
             correctGif: "rocket-launch.gif",
             incorrectGif: "rocket-explode.gif",
         },
@@ -67,6 +71,7 @@ $(document).ready(function () {
                 "1,000",
                 "1,000,000"
             ],
+            abr: "cm",
             correctGif: "centimeter-crawl.gif",
             incorrectGif: "paul-rudd.gif",
         },
@@ -81,6 +86,7 @@ $(document).ready(function () {
                 "1,000",
                 "1,000,000"
             ],
+            abr: "mg",
             correctGif: "papers-flying.gif",
             incorrectGif: "throw-notebook.gif",
         },
@@ -94,6 +100,7 @@ $(document).ready(function () {
                 "1,000,000",
                 "10"
             ],
+            abr: "mg",
             correctGif: "mixer-win.gif",
             incorrectGif: "mixer-fail.gif",
         },
@@ -107,6 +114,7 @@ $(document).ready(function () {
                 "1,000,000",
                 "10"
             ],
+            abr: "g",
             correctGif: "kid-thumbsup.gif",
             incorrectGif: "wrong-note.gif",
         },
@@ -120,6 +128,7 @@ $(document).ready(function () {
                 "1,000,000",
                 "10"
             ],
+            abr: "kg",
             correctGif: "elephant-ribbon.gif",
             incorrectGif: "elephant-fall.gif",
         },
@@ -133,6 +142,7 @@ $(document).ready(function () {
                 "1,000,000",
                 "10"
             ],
+            abr: "mg",
             correctGif: "hangover-cards.gif",
             incorrectGif: "confused-girl.gif",
         },
@@ -146,6 +156,7 @@ $(document).ready(function () {
                 "1,000",
                 "1,000,000"
             ],
+            abr: "ml",
             correctGif: "water-win.gif",
             incorrectGif: "water-fail.gif",
         },
@@ -159,6 +170,7 @@ $(document).ready(function () {
                 "1,000",
                 "100"
             ],
+            abr: "l",
             correctGif: "waterfall.gif",
             incorrectGif: "puddle.gif",
         },
@@ -172,6 +184,7 @@ $(document).ready(function () {
                 "-10",
                 "50"
             ],
+            abr: "&deg;C",
             correctGif: "freezing-bulb.gif",
             incorrectGif: "in-ice.gif",
         },
@@ -185,6 +198,7 @@ $(document).ready(function () {
                 "50",
                 "80"
             ],
+            abr: "&deg;C",
             correctGif: "chili.gif",
             incorrectGif: "turkey-fire.gif",
         },
@@ -202,6 +216,7 @@ $(document).ready(function () {
                 "2000",
                 "4960"
             ],
+            abr: "ft",
             correctGif: "dog-measuring.gif",
             incorrectGif: "idk-girl.gif",
         },
@@ -215,6 +230,7 @@ $(document).ready(function () {
                 "10",
                 "8"
             ],
+            abr: "in",
             correctGif: "building-create.gif",
             incorrectGif: "building-falling.gif",
         },
@@ -228,6 +244,7 @@ $(document).ready(function () {
                 "5",
                 "8"
             ],
+            abr: "ft",
             correctGif: "nun-sing.gif",
             incorrectGif: "nun-attack.gif",
         },
@@ -241,6 +258,7 @@ $(document).ready(function () {
                 "44,720",
                 "52,000"
             ],
+            abr: "in",
             correctGif: "know-everything.gif",
             incorrectGif: "trump-wrong.gif",
         },
@@ -254,6 +272,7 @@ $(document).ready(function () {
                 "2,280",
                 "1,500"
             ],
+            abr: "yd",
             correctGif: "football.gif",
             incorrectGif: "basketball-fall.gif",
         },
@@ -267,6 +286,7 @@ $(document).ready(function () {
                 "20",
                 "10"
             ],
+            abr: "oz",
             correctGif: "scale.gif",
             incorrectGif: "scale-fall.gif",
         },
@@ -280,6 +300,7 @@ $(document).ready(function () {
                 "3,200",
                 "1,440"
             ],
+            abr: "lbs",
             correctGif: "fridge.gif",
             incorrectGif: "drop-weights.gif",
         },
@@ -293,6 +314,7 @@ $(document).ready(function () {
                 "20,000",
                 "28,000"
             ],
+            abr: "oz",
             correctGif: "shimmy.gif",
             incorrectGif: "wide-eyes.gif",
         },
@@ -306,6 +328,7 @@ $(document).ready(function () {
                 "4",
                 "2"
             ],
+            abr: "tsp",
             correctGif: "sugar-spoon.gif",
             incorrectGif: "more-sugar.gif",
         },
@@ -319,6 +342,7 @@ $(document).ready(function () {
                 "4",
                 "7"
             ],
+            abr: "tbsp",
             correctGif: "cute-wink.gif",
             incorrectGif: "obama.gif",
         },
@@ -332,6 +356,7 @@ $(document).ready(function () {
                 "12",
                 "4"
             ],
+            abr: "fl oz",
             correctGif: "measure-cup.gif",
             incorrectGif: "spaghetti-full.gif",
         },
@@ -345,6 +370,7 @@ $(document).ready(function () {
                 "5",
                 "2"
             ],
+            abr: "c",
             correctGif: "britney-cake.gif",
             incorrectGif: "cake-hand.gif",
         },
@@ -358,6 +384,7 @@ $(document).ready(function () {
                 "3",
                 "2"
             ],
+            abr: "pt",
             correctGif: "beer.gif",
             incorrectGif: "beer-fail.gif",
         },
@@ -371,6 +398,7 @@ $(document).ready(function () {
                 "3",
                 "2"
             ],
+            abr: "qt",
             correctGif: "drink-milk.gif",
             incorrectGif: "milk-fail.gif",
         },
@@ -384,6 +412,7 @@ $(document).ready(function () {
                 "40",
                 "12"
             ],
+            abr: "&deg;F",
             correctGif: "ice-tower.gif",
             incorrectGif: "ice-falling.gif",
         },
@@ -397,6 +426,7 @@ $(document).ready(function () {
                 "100",
                 "150"
             ],
+            abr: "&deg;F",
             correctGif: "happy-kettle.gif",
             incorrectGif: "drop-kettle.gif",
         },
@@ -514,15 +544,11 @@ $(document).ready(function () {
 
         shuffle(playMode[currentIndex].choices);
 
-        $("#ans1").html("<button class='ansButton list-group-item list-group-item-action'>" +
-            playMode[currentIndex].choices[0] + "</button>");
-        $("#ans2").html("<button class='ansButton list-group-item list-group-item-action'>" +
-            playMode[currentIndex].choices[1] + "</button>");
-        $("#ans3").html("<button class='ansButton list-group-item list-group-item-action'>" +
-            playMode[currentIndex].choices[2] + "</button>");
-        $("#ans4").html("<button class='ansButton list-group-item list-group-item-action'>" +
-            playMode[currentIndex].choices[3] + "</button>");
+        for (i = 0; i < playMode[currentIndex].choices.length; i++) {
+            $("#ans1").append("<button class='ansButton list-group-item list-group-item-action' answer='" + playMode[currentIndex].choices[i] + "'>" +
+                playMode[currentIndex].choices[i] + "<span class='text-75'> " + playMode[currentIndex].abr + "</span></button>");
 
+        }
         $("#currentGif").html("");
 
         questionCount++;
@@ -535,9 +561,10 @@ $(document).ready(function () {
 
 
         $(".ansButton").on("click", function () {
-
-            var yourAnswer = this.innerHTML;
+            console.log(this);
+            var yourAnswer = $(this).attr('answer');
             console.log("Your Answer: " + yourAnswer);
+
 
             stop();
 
