@@ -546,7 +546,7 @@ $(document).ready(function () {
 
         for (i = 0; i < playMode[currentIndex].choices.length; i++) {
             $("#ans1").append("<button class='ansButton list-group-item list-group-item-action' answer='" + playMode[currentIndex].choices[i] + "'>" +
-                playMode[currentIndex].choices[i] + "<span class='text-75'> " + playMode[currentIndex].abr + "</span></button>");
+                playMode[currentIndex].choices[i] + "<span class='text-60'> " + playMode[currentIndex].abr + "</span></button>");
 
         }
         $("#currentGif").html("");

@@ -40,6 +40,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    border: ridge #8D6E52 10px;
 }
 
 img {
@@ -50,6 +52,6 @@ img {
     font-size: 50%;
 }
 
-.text-75 {
+.text-60 {
     font-size: 60%;
 }
