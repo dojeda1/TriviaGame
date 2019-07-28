@@ -6,6 +6,8 @@ Test your knowledge of both the metric and imperial units of measurement. Each q
 
   **Visit Web App [Here!](https://dojeda1.github.io/TriviaGame/)**
 
+![Web App Image](./demo.png)
+
 ### Technologies used
 
 * HTML
